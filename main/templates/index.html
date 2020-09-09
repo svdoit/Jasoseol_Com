@@ -1,0 +1,31 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자소설 닷컴</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}" class="">
+</head>
+<body>
+    <div class="make_jss">
+        <a href="{% url 'create' %}">
+        <div class="plus_btn">
+            +
+        </div>
+        </a>
+
+        <p>자기소개서 작성</p>
+    </div>
+
+    {% for jss in all_jss %}
+    <div class="all_jss">
+        <p>{{ jss.title }}</p>
+        <p>{{ jss.content }}</p>
+        <p>{{ jss.updated_at|date:"Y-m-d" }}</p>
+        <!-- |date:"Y m d" 이렇게 해도 됨. 다양하게 활용 가능 template filter -->
+    </div>    
+    {% endfor %}
+</body>
+</html>
