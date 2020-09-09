@@ -20,13 +20,15 @@
     </div>
 
     {% for jss in all_jss %}
+    <a href="{% url 'detail' jss.id %}">
     <div class="all_jss">
         <p>{{ jss.id }}</p>
         <p>{{ jss.title }}</p>
         <p>{{ jss.content }}</p>
         <p>{{ jss.updated_at|date:"Y-m-d" }}</p>
         <!-- |date:"Y m d" 이렇게 해도 됨. 다양하게 활용 가능 template filter -->
-    </div>    
+    </div>
+    </a>    
     {% endfor %}
 </body>
 </html>
