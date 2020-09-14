@@ -8,7 +8,7 @@ class Jasoseol(models.Model):
     content = models.TextField()
     updated_at = models.DateTimeField(auto_now=True) #시간이 자동으로 입력 됨 
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-
+    
 class Comment(models.Model):
     content = models.CharField(max_length=100)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
