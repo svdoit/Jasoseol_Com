@@ -3,3 +3,4 @@ from .models import Jasoseol
 
 # Register your models here.
 admin.site.register(Jasoseol)
+admin.site.register(Comment)

@@ -1,0 +1,9 @@
+<!-- LoginView이용하려면 registration폴더를 만들고 그 안에 login.html파일이 있어야 함. 둘 다 만들어줘야 됨 -->
+
+<h1>로그인페이지</h1>
+
+<form method="POST" action="">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" value="로그인">
+</form>
