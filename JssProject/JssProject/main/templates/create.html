@@ -1,0 +1,8 @@
+
+<form method="POST" action="">
+{% csrf_token %}
+{{ jss_form.as_p }} <!-- .as_p를 뒤에 붙이면 새로정렬이 됨 -->
+<input type="submit" value="확인">
+</form>
+
+
